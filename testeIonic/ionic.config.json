@@ -1,7 +1,0 @@
-{
-  "name": "testeIonic",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "vue-vite"
-}
