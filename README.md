@@ -71,7 +71,7 @@ cd ..
 ```
 
 ```
-cd alerth-mobile/mobile
+cd mobile
 ```
 
 ### 5. Faça o bui Sincronizar com Capacitor
