@@ -1,6 +1,9 @@
 <template>
     <div class="cardPrincipal">
-        <h2>Onde está a ocorrência?</h2>
+        <div class="inputGrupo">
+            <input type="text" placeholder="Onde está a ocorrência?" class="inputOcorrencia" />
+            <button class="botaoProcurar">Procurar</button>
+        </div>
         <div class="grupoIcone">
             <button class="botaoIcone">
                 <img src="../assets/icone__canoQuebrado.svg" alt="Ícone de um cano quebrado" />
@@ -33,16 +36,50 @@
     background-color: white;
     border-radius: 16px;
     padding: 25px;
-    z-index: 3;
+    z-index: 2;
 }
 
-h2 {
-    margin: 0;
-    font-size: 13px;
-    color: #758eb5;
-    padding: 15px 170px 15px 1px;
+.inputGrupo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EEF5FF;
     border-radius: 8px;
-    background-color: #eef5ff;
+    padding: 10px;
+}
+
+.inputOcorrencia {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #758eb5;
+    background-color: #EEF5FF; 
+    margin-right: 10px;
+}
+
+.inputOcorrencia::placeholder{
+    font-weight: bold;
+    color: #758EB5;
+    font-size: 13px;
+}
+
+.inputOcorrencia:focus {
+    outline: none;
+}
+
+.botaoProcurar {
+    background-color: #3888FF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.botaoProcurar:hover {
+    background-color: #1c76fc;
 }
 
 .grupoIcone {
@@ -58,10 +95,11 @@ h2 {
     color: #000;
     flex: 1;
     margin: 0 5px;
+    border: none;
 }
 
 .botaoIcone:hover {
-    background-color: #d9e6ff;
+    opacity: 0.5;
 }
 
 .botaoIcone img {
@@ -86,6 +124,6 @@ h2 {
 }
 
 .botaoMarcarOcorrencia:hover {
-    background-color: #227AFF;
+    background-color: #1c76fc;
 }
 </style>

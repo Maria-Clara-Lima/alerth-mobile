@@ -31,7 +31,7 @@ export default {
   left: 20px;
   border-radius: 8px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 4;
   background-color: #fff;
 }
 

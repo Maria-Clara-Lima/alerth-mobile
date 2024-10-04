@@ -15,7 +15,6 @@ import mapaAplicacao from '../components/mapaAplicacao.vue';
 import cardIcone from '../components/cardIcone.vue';
 
 export default {
-    name: 'inicial',
     components: {
         menuSuperior,
         dropdownMenu,
