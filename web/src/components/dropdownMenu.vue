@@ -110,6 +110,7 @@ a {
     margin: 10px 0 10px 15px;
     color: #758EB5;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .sairConta {
