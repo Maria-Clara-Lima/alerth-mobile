@@ -10,7 +10,6 @@
                 :key="index" 
                 :imagem="icone.imagem" 
                 :texto="icone.texto"
-                @click="marcarOcorrencia(icone.texto)"
                 class="botaoIcone" 
             />
         </div>

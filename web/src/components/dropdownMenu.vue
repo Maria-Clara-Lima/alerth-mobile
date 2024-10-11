@@ -117,6 +117,7 @@ a {
     color: #758EB5;
     font-weight: bold;
     text-decoration: none;
+    text-decoration: none;
 }
 
 .sairConta {
