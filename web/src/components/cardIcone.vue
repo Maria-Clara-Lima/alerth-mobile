@@ -2,30 +2,44 @@
     <div class="cardPrincipal">
         <div class="inputGrupo">
             <input type="text" placeholder="Onde está a ocorrência?" class="inputOcorrencia" />
-            <button class="botaoProcurar">Procurar</button>
+            <img src="../assets/procurarIcone.png" alt="Ícone procurar" style="margin-right: 10px;" />
         </div>
         <div class="grupoIcone">
-            <button class="botaoIcone">
-                <img src="../assets/icone__canoQuebrado.svg" alt="Ícone de um cano quebrado" />
-                <p>Cano Quebrado</p>
-            </button>
-            <button class="botaoIcone">
-                <img src="../assets/icone__alagamento.svg" alt="Ícone de um alagamento" />
-                <p>Alagamento</p>
-            </button>
-            <button class="botaoIcone">
-                <img src="../assets/icone__arvoreCaida.svg" alt="Ícone de uma árvore Caída" />
-                <p>Árvore caída</p>
-            </button>
-            <button class="botaoIcone">
-                <img src="../assets/icone__semaforoQueimado.svg" alt="Ícone de um semáforo queimado" />
-                <p>Semáforo Queimado</p>
-            </button>
+            <botao-icone 
+                v-for="(icone, index) in iconesArray" 
+                :key="index" 
+                :imagem="icone.imagem" 
+                :texto="icone.texto"
+                class="botaoIcone" 
+            />
         </div>
-
         <button class="botaoMarcarOcorrencia">Marcar Ocorrência</button>
     </div>
 </template>
+
+<script>
+import botaoIcone from './iconeBotao.vue'; 
+import iconeCanoQuebrado from '../assets/icone__canoQuebrado.svg';
+import iconeAlagamento from '../assets/icone__alagamento.svg';
+import iconeArvoreCaida from '../assets/icone__arvoreCaida.svg';
+import iconeSemaforoQueimado from '../assets/icone__semaforoQueimado.svg';
+
+export default {
+    components: {
+        botaoIcone,
+    },
+    data() {
+        return {
+            iconesArray: [
+                { imagem: iconeCanoQuebrado, texto: 'Cano Quebrado' },
+                { imagem: iconeAlagamento, texto: 'Alagamento' },
+                { imagem: iconeArvoreCaida, texto: 'Árvore Caída' },
+                { imagem: iconeSemaforoQueimado, texto: 'Semáforo Queimado' },
+            ],
+        };
+    }
+};
+</script>
 
 <style scoped>
 .cardPrincipal {
@@ -55,11 +69,11 @@
     border-radius: 8px;
     font-size: 15px;
     color: #758eb5;
-    background-color: #EEF5FF; 
+    background-color: #EEF5FF;
     margin-right: 10px;
 }
 
-.inputOcorrencia::placeholder{
+.inputOcorrencia::placeholder {
     font-weight: bold;
     color: #758EB5;
     font-size: 13px;
@@ -69,50 +83,10 @@
     outline: none;
 }
 
-.botaoProcurar {
-    background-color: #3888FF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.botaoProcurar:hover {
-    background-color: #1c76fc;
-}
-
 .grupoIcone {
     display: flex;
     justify-content: space-between;
     margin: 30px 0 20px 0;
-}
-
-.botaoIcone {
-    background-color: #eef5ff;
-    border-radius: 8px;
-    padding: 5px;
-    color: #000;
-    flex: 1;
-    margin: 0 5px;
-    border: none;
-}
-
-.botaoIcone:hover {
-    opacity: 0.5;
-}
-
-.botaoIcone img {
-    width: 30px;
-    height: auto;
-    display: block;
-    margin: auto;
-}
-
-.botaoIcone p {
-    margin-top: 4px;
-    font-size: 12px;
-    color: #758eb5;
 }
 
 .botaoMarcarOcorrencia {

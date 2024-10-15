@@ -47,8 +47,10 @@ export default {
     z-index: 3;
     padding: 20px;
     width: 250px;
-    height: 100vh;
+    height: calc(100vh - 40px);
+    overflow: hidden; 
 }
+
 
 .infoXP__C {
     display: flex;
@@ -56,12 +58,14 @@ export default {
     align-items: center;
     margin-bottom: 20px;
     margin-top: 30px;
+    font-weight: bold;
 }
 
 .infoXP {
     margin-right: 15px;
     font-size: 1em;
     color: #3888FF;
+    font-weight: bold;
 }
 
 .infoC {
@@ -82,22 +86,24 @@ export default {
     text-align: center;
     margin-bottom: 50px;
     background-color: #ECF4FF;
-    padding: 20px;
     border-radius: 10px;
 }
 
-h1 {
-    margin: 8px 0;
+.containerConquista h1 {
+    margin: 20px 0 8px 0; 
+    padding: 0 20px;
     font-size: 1.5em;
     color: #027DA4;
 }
 
-p {
-    margin: 0;
+.containerConquista p {
+    margin: 0 0 20px 0; 
+    padding: 0 20px;
     font-size: 0.9em;
     color: #758EB5;
     font-weight: bold;
 }
+
 
 h2 {
     margin-top: 30px;
@@ -111,6 +117,7 @@ a {
     color: #758EB5;
     font-weight: bold;
     text-decoration: none;
+    text-decoration: none;
 }
 
 .sairConta {
@@ -120,4 +127,37 @@ a {
 .containerConta {
     margin-top: 65px;
 }
+
+@media (max-width: 400px) {
+
+    .infoXP__C {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1em; 
+    }
+
+    a {
+        margin: 15px 0 5px 0; 
+        font-size: 0.9em; 
+    }
+
+    .containerConquista {
+        margin-bottom: 30px; 
+    }
+
+    .imagemTrofeu {
+        width: 50px; 
+    }
+
+    .containerConta {
+        margin-top: 60px;
+    }
+}
+
 </style>
